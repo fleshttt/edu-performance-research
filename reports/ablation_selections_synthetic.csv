@@ -1,0 +1,15 @@
+pattern,missing_rate,model,chosen_window_on_validation,validation_ap,test_ap_chosen,test_ap_snapshot,test_ap_delta_vs_snapshot
+blocked_terms,0.1,logistic_regression,3,0.78264,0.796376,0.734415,0.061961
+blocked_terms,0.1,random_forest,5,0.788621,0.810728,0.709392,0.101336
+blocked_terms,0.25,logistic_regression,5,0.779636,0.808949,0.691122,0.117827
+blocked_terms,0.25,random_forest,5,0.776367,0.803977,0.66692,0.137057
+blocked_terms,0.4,logistic_regression,5,0.775689,0.808722,0.643823,0.164899
+blocked_terms,0.4,random_forest,5,0.763181,0.803925,0.614715,0.18921
+mcar_cells,0.0,logistic_regression,5,0.797225,0.8164,0.754012,0.062388
+mcar_cells,0.0,random_forest,5,0.793843,0.819235,0.731133,0.088102
+mcar_cells,0.1,logistic_regression,3,0.782634,0.799171,0.73457,0.064601
+mcar_cells,0.1,random_forest,5,0.788338,0.804167,0.710976,0.093191
+mcar_cells,0.25,logistic_regression,5,0.776962,0.801923,0.710573,0.09135
+mcar_cells,0.25,random_forest,3,0.776133,0.777266,0.686529,0.090737
+mcar_cells,0.4,logistic_regression,5,0.76477,0.791145,0.681743,0.109402
+mcar_cells,0.4,random_forest,5,0.771183,0.791894,0.664417,0.127477

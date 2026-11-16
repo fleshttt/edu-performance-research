@@ -1,0 +1,196 @@
+{
+  "mode": "SYNTHETIC_SCHEMA_FIXTURE",
+  "version": "0.8.0",
+  "source": "OULAD files, provided locally by experimenter",
+  "design": {
+    "target": "Fail/Withdrawn versus Pass/Distinction (enrolled at cutoff)",
+    "cutoff_day": 84,
+    "windows_days": [
+      14,
+      28,
+      56,
+      84
+    ],
+    "family": "random_forest",
+    "train_presentations": [
+      "2013B",
+      "2013J"
+    ],
+    "validation_presentation": "2014B",
+    "holdout_presentation": "2014J",
+    "duplicate_students_excluded_across_splits": true,
+    "selection": "module-level validation mean AP minus 1 descriptive SE"
+  },
+  "n_rows": {
+    "train": 270,
+    "val": 135,
+    "test": 135
+  },
+  "classes": {
+    "train": 0.47037,
+    "val": 0.48889,
+    "test": 0.48148
+  },
+  "selection": {
+    "fixed_window_days": 56,
+    "selected_method": "fixed_val",
+    "validation_ap_by_window": {
+      "14": 0.68764,
+      "28": 0.7129,
+      "56": 0.74255,
+      "84": 0.71528
+    },
+    "validation_method_stability": {
+      "fixed_val": {
+        "mean_ap": 0.755973,
+        "descriptive_se": 0.026113,
+        "n_modules_with_both_classes": 3,
+        "score": 0.72986
+      },
+      "adaptive_gate": {
+        "mean_ap": 0.726161,
+        "descriptive_se": 0.025773,
+        "n_modules_with_both_classes": 3,
+        "score": 0.700388
+      },
+      "uniform_ensemble": {
+        "mean_ap": 0.726509,
+        "descriptive_se": 0.02064,
+        "n_modules_with_both_classes": 3,
+        "score": 0.705869
+      },
+      "weighted_ensemble": {
+        "mean_ap": 0.72979,
+        "descriptive_se": 0.020644,
+        "n_modules_with_both_classes": 3,
+        "score": 0.709146
+      }
+    }
+  },
+  "metrics": {
+    "fixed_val": {
+      "n": 135,
+      "prevalence": 0.48148,
+      "ap": 0.73,
+      "roc_auc": 0.73857,
+      "brier": 0.19792,
+      "ece10": 0.07388
+    },
+    "adaptive_gate": {
+      "n": 135,
+      "prevalence": 0.48148,
+      "ap": 0.69709,
+      "roc_auc": 0.75209,
+      "brier": 0.21352,
+      "ece10": 0.104
+    },
+    "uniform_ensemble": {
+      "n": 135,
+      "prevalence": 0.48148,
+      "ap": 0.71508,
+      "roc_auc": 0.75011,
+      "brier": 0.19688,
+      "ece10": 0.09981
+    },
+    "weighted_ensemble": {
+      "n": 135,
+      "prevalence": 0.48148,
+      "ap": 0.72121,
+      "roc_auc": 0.75077,
+      "brier": 0.19639,
+      "ece10": 0.09672
+    },
+    "selected_calibrated": {
+      "n": 135,
+      "prevalence": 0.48148,
+      "ap": 0.73,
+      "roc_auc": 0.73857,
+      "brier": 0.19866,
+      "ece10": 0.07825
+    }
+  },
+  "comparison": {
+    "selected_minus_fixed_ap": 0.0
+  },
+  "bootstrap": {
+    "delta_ap": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "resamples": 150,
+    "unit": "id_student in held-out cohort"
+  },
+  "selective": [
+    {
+      "margin": 0.0,
+      "coverage": 1.0,
+      "n": 135,
+      "classification_error": 0.25926,
+      "ap": 0.73
+    },
+    {
+      "margin": 0.1,
+      "coverage": 0.9481,
+      "n": 128,
+      "classification_error": 0.25781,
+      "ap": 0.72256
+    },
+    {
+      "margin": 0.2,
+      "coverage": 0.763,
+      "n": 103,
+      "classification_error": 0.26214,
+      "ap": 0.72748
+    },
+    {
+      "margin": 0.3,
+      "coverage": 0.2741,
+      "n": 37,
+      "classification_error": 0.24324,
+      "ap": 0.6144
+    }
+  ],
+  "source_file_hashes": {
+    "studentInfo.csv": {
+      "sha256": "0de9701864ab5527ab7914a0ab22c17c1bbae7287bead73517e5797e7b78a381",
+      "bytes": 22297
+    },
+    "studentAssessment.csv": {
+      "sha256": "b8fd1144d07480feee2cb34829f4b2f514f5e2e3e292c341be782712e8aa7ed8",
+      "bytes": 41923
+    },
+    "assessments.csv": {
+      "sha256": "2e45a572fb9c33750883df5670321708b52b7ffd60cde8eb01b85cf8dbd5f2f0",
+      "bytes": 1524
+    },
+    "studentRegistration.csv": {
+      "sha256": "ed323ea2c32abde5160fb75086cfdb020afc2a13e899f1aa0e3898ac23556d9c",
+      "bytes": 11959
+    },
+    "studentVle.csv": {
+      "sha256": "4d86600c0303588c9b057b7ce7081e8e385c0264d68b126686c9c76fbfe51390",
+      "bytes": 459627
+    },
+    "courses.csv": {
+      "sha256": "39c1037174d4f2945f1217b14bcf828bd6a1f723cdd4b8627cd431da5fa34b3a",
+      "bytes": 225
+    },
+    "vle.csv": {
+      "sha256": "06695aefe091c8857538ec76598cce61ac8c978907713f35b2ba2ab031a8c4ad",
+      "bytes": 382
+    }
+  },
+  "limitations": [
+    "OULAD is course-weekly data, not multi-semester TUSUR trajectories",
+    "External holdout is 2014J; temporal and institutional transport is not established",
+    "The dataset does not provide the date grades were released; due-date filtering is only a proxy",
+    "Observed non-submission, no VLE activity, and missing data have different meanings",
+    "Students unregistered by day 84 are excluded; the target is conditional on still being enrolled",
+    "Validation modules are few/dependent; their AP SE is only a descriptive heuristic",
+    "Platt calibration is fitted on the same validation pool used for method selection",
+    "The 95% student-cluster bootstrap interval is conditional on this held-out 2014J cohort",
+    "No demographic features, fairness audit, or intervention effects assessed",
+    "Never use predictions for student sanctions or automated consequential decisions"
+  ]
+}

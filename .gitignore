@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.env
+.DS_Store
+# Never commit real student records or trained artifacts from real data.
+data/*.csv
+!data/synthetic_demo.csv
+reports/*.joblib
+reports/*.json
+!reports/synthetic_demo_summary.json
+__pycache__/
+.pytest_cache/
+*.pyc
+
+data/oulad/raw/*.csv
+reports/runs/
+tmp/

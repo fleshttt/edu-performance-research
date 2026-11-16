@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edu-performance-research"
+version = "0.8.0"
+description = "Исследовательский прототип прогнозирования академической успеваемости"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+ "numpy>=1.26,<3", "pandas>=2.2,<3", "scikit-learn>=1.5,<2",
+ "joblib>=1.3,<2", "fastapi>=0.110,<1", "uvicorn>=0.30,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
